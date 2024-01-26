@@ -9,6 +9,7 @@ import {
 } from "../../redux/user/userslice";
 //to dispatch above logice we use dispatch
 import { useDispatch, useSelector } from "react-redux";
+import OAuth from "../components/OAuth";
 
 export default function SignIn() {
   const navigate = useNavigate();
@@ -117,6 +118,7 @@ export default function SignIn() {
                 "SignIn"
               )}
             </Button>
+            <OAuth />
           </form>
           <div className="flex flex-row text-sm gap-2 mt-3">
             <span>Not ave an account?</span>
