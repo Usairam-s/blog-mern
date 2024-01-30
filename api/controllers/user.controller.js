@@ -52,3 +52,15 @@ export const updateUser = async (req, res, next) => {
     next(error);
   }
 };
+
+export const deleteUser = async (req, res, next) => {
+  if (req.user.id !== req.params.id) {
+    return next(errorHandler(401, "You don't have permission to perform this"));
+  }
+  try {
+    await User.findByIdAndDelete(req.params.id);
+    res.status(201).json("User deleted Successfully");
+  } catch (error) {
+    next(error);
+  }
+};
