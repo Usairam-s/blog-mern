@@ -64,3 +64,12 @@ export const deleteUser = async (req, res, next) => {
     next(error);
   }
 };
+
+export const signout = async (req, res, next) => {
+  //remove the token from the user object and send it back
+  try {
+    res.clearCookie("access_token").status(200).json("User has been signout");
+  } catch (error) {
+    next(error);
+  }
+};
