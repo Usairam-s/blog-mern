@@ -19,7 +19,7 @@ export default function OAuth() {
       //calling a function for signin pop
       const resultFromGoogle = await signInWithPopup(auth, provider);
 
-      const res = await fetch("api/auth/google", {
+      const res = await fetch("/api/auth/google", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
