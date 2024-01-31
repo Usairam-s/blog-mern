@@ -4,11 +4,11 @@ const postSchema = new mongoose.Schema(
   {
     userId: {
       type: String,
-      required: true,
+      required: true, // corrected
     },
     content: {
       type: String,
-      required: true,
+      required: true, // corrected
     },
     title: {
       type: String,
@@ -25,7 +25,7 @@ const postSchema = new mongoose.Schema(
       default: "Uncategorized",
     },
     slug: {
-      tyep: String,
+      type: String,
       required: true,
       unique: true,
     },
