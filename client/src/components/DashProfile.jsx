@@ -14,7 +14,7 @@ import {
   ref,
   uploadBytesResumable,
 } from "firebase/storage";
-import { app } from "../firebase";
+import { app } from "../Firebase";
 import { CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import {
@@ -27,6 +27,7 @@ import {
   signoutSuccess,
 } from "../../redux/user/userslice";
 import { HiOutlineExclamationCircle } from "react-icons/hi";
+import { Link } from "react-router-dom";
 
 export default function DashProfile() {
   const dispatch = useDispatch();
@@ -244,6 +245,15 @@ export default function DashProfile() {
         <Button type="submit" gradientDuoTone="purpleToBlue" outline>
           Update
         </Button>
+        <Link to="/create-post">
+          <Button
+            type="button"
+            gradientDuoTone="purpleToPink"
+            className="w-full"
+          >
+            Create post
+          </Button>
+        </Link>
       </form>
       <div className="text-red-500 flex justify-between mt-5">
         <span onClick={() => setShowModal(true)} className="cursor-pointer">
