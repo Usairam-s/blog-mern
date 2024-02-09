@@ -14,7 +14,7 @@ import OAuth from "../components/OAuth";
 export default function SignIn() {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({});
-  //const [errorMessage, setErrorMessage] = useState(null);
+  // const [errorMessage, setErrorMessage] = useState(null);
   //const [loading, setLoading] = useState(null);
   //use state from use slisce using useSelector here
   const { loading, error: errorMessage } = useSelector((state) => state.user);
@@ -121,7 +121,7 @@ export default function SignIn() {
             <OAuth />
           </form>
           <div className="flex flex-row text-sm gap-2 mt-3">
-            <span>Not ave an account?</span>
+            <span>Not have an account?</span>
             <Link className="text-sky-800" to="/sign-up">
               Sign Up
             </Link>
